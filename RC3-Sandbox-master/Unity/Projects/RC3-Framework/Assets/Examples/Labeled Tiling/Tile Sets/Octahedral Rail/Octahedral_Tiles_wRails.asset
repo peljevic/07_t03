@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1a5c79eefc2404fa21f402c390395c, type: 3}
+  m_Name: Octahedral_Tiles_wRails
+  m_EditorClassIdentifier: 
+  _tiles:
+  - {fileID: 11400000, guid: 6aa993acbc22b424d96f84d836bcbea3, type: 2}
+  - {fileID: 11400000, guid: 810d37507994e4a4491819bf85343a30, type: 2}
+  - {fileID: 11400000, guid: 458ac30a870666546b5c8c492a0bee01, type: 2}
+  - {fileID: 11400000, guid: 00c8049aee959a44bb80bec3ce57c1a8, type: 2}
+  - {fileID: 11400000, guid: a01939eb0fe35ad448e8ac3882f90a12, type: 2}
+  - {fileID: 11400000, guid: c50a5dbd1bd4b7b4faf60c84472980fe, type: 2}
+  - {fileID: 11400000, guid: da13cf17d70229944abaecb1c3530301, type: 2}
+  - {fileID: 11400000, guid: 1d5aa1f075f099b49bdc3ae24c7bd752, type: 2}
+  - {fileID: 11400000, guid: 3392d81275616fe49bddc3af54f175e4, type: 2}
+  - {fileID: 11400000, guid: dc662ab419e391a44bbac27ecdd08864, type: 2}
+  - {fileID: 11400000, guid: 5da8db41ca54d2049815458fb063ff0e, type: 2}
+  - {fileID: 11400000, guid: ff33ec6fd42887442afb6479cca65112, type: 2}
+  - {fileID: 11400000, guid: 0390b4eb2f96120418c1393cc37aabd2, type: 2}
+  - {fileID: 11400000, guid: a3afa5639a84b5e4d8299f41105755c8, type: 2}
+  - {fileID: 11400000, guid: ca125f970c49d584bb07daa5f2007b27, type: 2}
+  - {fileID: 11400000, guid: 8baf65d909070944f829a56a5c201ee8, type: 2}
+  - {fileID: 11400000, guid: cd0a286b7309b5c4a820964d8ce939f2, type: 2}
+  - {fileID: 11400000, guid: 54a81464e318c6745948a3ac33ccf6c9, type: 2}
+  - {fileID: 11400000, guid: 828934133dd1cef499c5fb17d4a933d3, type: 2}
+  - {fileID: 11400000, guid: e3e7b7615f2f5da46be4cbb4421ce364, type: 2}
+  - {fileID: 11400000, guid: dcb9628776942724ea03e3e1e68feb9a, type: 2}
+  - {fileID: 11400000, guid: 691a32afb6739a1428afa0be5079040c, type: 2}
+  - {fileID: 11400000, guid: 1bd7d2103c5202348941d8d58476f451, type: 2}
