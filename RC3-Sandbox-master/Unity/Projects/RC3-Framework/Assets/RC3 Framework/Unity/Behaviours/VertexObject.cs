@@ -15,6 +15,17 @@ namespace RC3.Unity
     {
         [SerializeField] private int _vertex;
 
+        [SerializeField] private Vector3 _pos;
+
+        private void Awake()
+        {
+            _pos = GetComponent<Transform>().position;
+        }
+
+        public Vector3 Pos
+        {
+            get { return _pos; }
+        }
 
         /// <summary>
         /// Returns the vertex associated with this object.
