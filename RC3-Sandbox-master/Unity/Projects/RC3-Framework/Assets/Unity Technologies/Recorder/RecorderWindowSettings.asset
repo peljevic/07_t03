@@ -25,7 +25,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_DisplayName: Pixels
   m_Id: f1247dec-c34e-4581-8dfc-813512eebc51
-  m_OutputSize: 720
+  m_OutputSize: 0
   m_AspectRatio: 0
   m_ForceEvenSize: 1
   source: 1
@@ -56,10 +56,10 @@ MonoBehaviour:
   m_DurationMode: 0
   m_SynchFrameRate: 1
   m_BaseFileName:
-    m_Pattern: movie.<ext>
+    m_Pattern: movie0001.<ext>-<ts>
   m_DestinationPath:
-    m_root: 1
-    m_leaf: Recordings
+    m_root: 0
+    m_leaf: A:/!!!!!!!! term03_storage/videos
   m_InputsSettings:
     m_InputsSettingsAssets:
     - {fileID: 114192776490043662}

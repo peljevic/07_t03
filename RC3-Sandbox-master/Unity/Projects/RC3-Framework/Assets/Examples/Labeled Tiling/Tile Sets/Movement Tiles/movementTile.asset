@@ -11,4 +11,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a1a5c79eefc2404fa21f402c390395c, type: 3}
   m_Name: movementTile
   m_EditorClassIdentifier: 
-  _tiles: []
+  _tiles:
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 1397272ffce136242a8773da34cfcbd7, type: 2}
+  - {fileID: 11400000, guid: 007a3e58eed34df4cbdeab14cad54a1c, type: 2}
+  - {fileID: 11400000, guid: f8a7ae0cf7525ae43ad196d0551d977a, type: 2}
+  - {fileID: 11400000, guid: a58f9caaebb3bb743b46115a759780db, type: 2}

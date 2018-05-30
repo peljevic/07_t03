@@ -184,9 +184,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 340881484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa26de9f32fe6b147969024d9b36c185, type: 3}
+  m_Script: {fileID: 11500000, guid: 6bbe8f57461a35c498a38d6f2fc05bda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sensitivity: 1
+  _stiffness: 5
 --- !u!114 &340881487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,9 +197,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 340881484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb37ee18b0367ad4d89d7676eab154a0, type: 3}
+  m_Script: {fileID: 11500000, guid: 84aecdb270ab164498082c7f94bfd6b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sensitivity: 1
+  _stiffness: 5
 --- !u!114 &340881488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,9 +210,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 340881484}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73582a54fa7d97141aa8e34188bbda0a, type: 3}
+  m_Script: {fileID: 11500000, guid: 2cf2491db4910a04b9e19757bb83cfc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _sensitivity: 5
+  _stiffness: 10
 --- !u!81 &340881489
 AudioListener:
   m_ObjectHideFlags: 0
@@ -410,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tileGraph: {fileID: 11400000, guid: 0365da7037b3ab5479c126d42c55795a, type: 2}
-  _tileSet: {fileID: 11400000, guid: 5f7e3f582c8a42b4faeddf15aca11a96, type: 2}
+  _tileSet: {fileID: 11400000, guid: b38eebbcdc59569489287fb97baa4535, type: 2}
   _boundaryTile: 0
   _substeps: 5
   _seed: 1
@@ -441,9 +447,9 @@ MonoBehaviour:
   _tileGraph: {fileID: 11400000, guid: 0365da7037b3ab5479c126d42c55795a, type: 2}
   _vertexPrefab: {fileID: 114922904220032880, guid: 2d3bfc3d1154a114a9d47325987aee28,
     type: 2}
-  _countX: 20
+  _countX: 5
   _countY: 5
-  _countZ: 3
+  _countZ: 20
 --- !u!114 &1467768201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,7 +462,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _grid: {fileID: 11400000, guid: 0365da7037b3ab5479c126d42c55795a, type: 2}
-  _tileSet: {fileID: 11400000, guid: 5f7e3f582c8a42b4faeddf15aca11a96, type: 2}
+  _tileSet: {fileID: 11400000, guid: b38eebbcdc59569489287fb97baa4535, type: 2}
   MaxForce: 1000
   MaxTorque: 1000
   Spectrum: []
@@ -472,7 +478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _grid: {fileID: 11400000, guid: 0365da7037b3ab5479c126d42c55795a, type: 2}
-  _tileSet: {fileID: 11400000, guid: 5f7e3f582c8a42b4faeddf15aca11a96, type: 2}
+  _tileSet: {fileID: 11400000, guid: b38eebbcdc59569489287fb97baa4535, type: 2}
   _speed: 0
 --- !u!114 &1467768203
 MonoBehaviour:
@@ -679,7 +685,7 @@ Prefab:
         type: 2}
       propertyPath: _tileSet
       value: 
-      objectReference: {fileID: 11400000, guid: 5f7e3f582c8a42b4faeddf15aca11a96,
+      objectReference: {fileID: 11400000, guid: b38eebbcdc59569489287fb97baa4535,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: edd44f439af1ece468d638148684783f, type: 2}

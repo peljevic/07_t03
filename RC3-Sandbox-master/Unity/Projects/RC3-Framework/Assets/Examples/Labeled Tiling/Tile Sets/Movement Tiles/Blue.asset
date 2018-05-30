@@ -11,8 +11,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8659d01aa4c9da447976bb89c1548cf2, type: 3}
   m_Name: Blue
   m_EditorClassIdentifier: 
-  _mesh: {fileID: 0}
-  _material: {fileID: 0}
-  _labels: []
-  _mass: 0
+  _mesh: {fileID: 4300000, guid: 5371e37a10d0eca4b9557f7d07e31b79, type: 3}
+  _material: {fileID: 2100000, guid: d549c402b02faf34988a940860785b57, type: 2}
+  _labels:
+  - 1
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  _mass: 0.2
   _drag: 0
