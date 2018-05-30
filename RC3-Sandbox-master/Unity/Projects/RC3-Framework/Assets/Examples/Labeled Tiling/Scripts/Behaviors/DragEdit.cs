@@ -72,24 +72,62 @@ namespace RC3.Unity.Examples.LabeledTiling
                 var v = _vertices[i];
                 _speed = v.Velocity;
 
-                if (_speed > 1)
+                if (_speed > 1 && v.Tile != _tileSet[0])
                 {
                     Debug.Log("the speed is " + _speed);
 
-                    v.Tile = _tileSet[21];
-
+                    var vDirections = v.Tile.Labels;
                     int[] neigh = new int[3];
-                    neigh[0] = _graph.GetVertexNeighborOut(i, 3);
-                    neigh[1] = _graph.GetVertexNeighborOut(i, 8);
-                    neigh[2] = _graph.GetVertexNeighborOut(i, 11);
+
+                    if (vDirections[3] == "1" || vDirections[8] == "1" || vDirections[11] == "1")
+                    {
+                        v.Tile = _tileSet[19];
+
+                       
+                        neigh[0] = _graph.GetVertexNeighborOut(i, 3);
+                        neigh[1] = _graph.GetVertexNeighborOut(i, 8);
+                        neigh[2] = _graph.GetVertexNeighborOut(i, 11);
+                    }
+
+                    else if (vDirections[1] == "1" || vDirections[9] == "1" || vDirections[6] == "1")
+                    {
+                        v.Tile = _tileSet[20];
+
+
+                        neigh[0] = _graph.GetVertexNeighborOut(i, 1);
+                        neigh[1] = _graph.GetVertexNeighborOut(i, 9);
+                        neigh[2] = _graph.GetVertexNeighborOut(i, 6);
+                    }
+
+                    else if (vDirections[0] == "1"  || vDirections[12] == "1")
+                    {
+                        v.Tile = _tileSet[21];
+
+
+                        neigh[0] = _graph.GetVertexNeighborOut(i, 0);
+                        neigh[1] = _graph.GetVertexNeighborOut(i, 12);
+                        neigh[2] = _graph.GetVertexNeighborOut(i, 11);
+                    }
+
+                    else if (vDirections[2] == "1" || vDirections[7] == "1" || vDirections[10] == "1")
+                    {
+                        v.Tile = _tileSet[21];
+
+
+                        neigh[0] = _graph.GetVertexNeighborOut(i, 2);
+                        neigh[1] = _graph.GetVertexNeighborOut(i, 7);
+                        neigh[2] = _graph.GetVertexNeighborOut(i, 10);
+                    }
+
 
                     foreach (var n in neigh)
-                    {
-                        var vn = _vertices[n];
-                        var joint = v.gameObject.AddComponent<FixedJoint>();
-                        joint.connectedBody = vn.GetComponent<Rigidbody>();
+                     {
+                            var vn = _vertices[n];
+                            var joint = v.gameObject.AddComponent<FixedJoint>();
+                            joint.connectedBody = vn.GetComponent<Rigidbody>();
 
-                    }
+                     }
+                   
                 }
 
             }
@@ -109,4 +147,4 @@ namespace RC3.Unity.Examples.LabeledTiling
     }
 
 
-            }
+}
