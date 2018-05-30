@@ -5,7 +5,7 @@ using UnityEngine;
 public class ModelDisplay : MonoBehaviour
 {
 
-    Vector3 centerOfObject;
+    private Vector3 centerOfObject;
 
     // Use this for initialization
     void Start()
@@ -24,4 +24,5 @@ public class ModelDisplay : MonoBehaviour
     {
         transform.RotateAround(centerOfObject, Vector3.up, 20 * Time.deltaTime);
     }
+
 }

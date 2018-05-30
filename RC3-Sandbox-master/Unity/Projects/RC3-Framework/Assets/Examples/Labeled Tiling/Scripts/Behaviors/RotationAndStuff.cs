@@ -7,14 +7,15 @@ using System;
 
 namespace RC3.Unity.Examples.LabeledTiling
 {
-
-    public class DragEdit : MonoBehaviour
+    
+    public class RotationAndStuff : MonoBehaviour
     {
         [SerializeField] private SharedDigraph _grid;
         [SerializeField] private TileSet _tileSet;
         [SerializeField] private float _speed;
         List<VertexObject> _vertices;
         private Digraph _graph;
+        private bool _rotate = false;
 
         private void Start()
         {
@@ -25,31 +26,31 @@ namespace RC3.Unity.Examples.LabeledTiling
 
         private void Update()
         {
-            if (Input.GetKey(KeyCode.D)) GetDrag();
 
             if (Input.GetKey(KeyCode.M)) CheckMovement();
 
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                if (gameObject.GetComponent<ModelDisplay>() == null)
-                {
-                    gameObject.AddComponent<ModelDisplay>();
-                }
-                else
-                {
-                    Destroy(gameObject.GetComponent<ModelDisplay>());
-                }
+                _rotate = !_rotate;
+                if (_rotate) RotateView();
             }
+
 
         }
 
-        private void GetDrag()
+        private void RotateView()
         {
-            foreach (var v in _vertices)
+            if (gameObject.GetComponent<ModelDisplay>() == null)
             {
-                v.Body.drag = v.Tile.Mass;
+                gameObject.AddComponent<ModelDisplay>();
+            }
+            else
+            {
+                Destroy(gameObject.GetComponent<ModelDisplay>());
             }
         }
+
+
 
         private void MoveUP()
         {

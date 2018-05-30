@@ -34,6 +34,19 @@ namespace RC3.Unity.Examples.LabeledTiling
             if (Input.GetKeyDown(KeyCode.R))
                 ResetTiles();
 
+         
+                       
+        }
+        private void RotateView()
+        {
+            if (gameObject.GetComponent<ModelDisplay>() == null)
+            {
+                gameObject.AddComponent<ModelDisplay>();
+            }
+            else
+            {
+                Destroy(gameObject.GetComponent<ModelDisplay>());
+            }
         }
 
         void ResetTiles()
@@ -61,8 +74,9 @@ namespace RC3.Unity.Examples.LabeledTiling
 
             GUI.Label(new Rect(new Vector2(35, 370), new Vector2(350, 100)), "AddJoints(); CheckLowest() = J"); //StoreTilesWithMeshes(); 
             GUI.Label(new Rect(new Vector2(35, 390), new Vector2(350, 100)), " AddGravity(); = G");
-            GUI.Label(new Rect(new Vector2(35, 410), new Vector2(350, 100)), " DeleteEmpty(); = E");
-            GUI.Label(new Rect(new Vector2(35, 430), new Vector2(350, 100)), " Count tiles by type = C");
+            GUI.Label(new Rect(new Vector2(35, 410), new Vector2(350, 100)), " RotateView(); = Space");
+            GUI.Label(new Rect(new Vector2(35, 430), new Vector2(350, 100)), " DeleteEmpty(); = E");
+            GUI.Label(new Rect(new Vector2(35, 450), new Vector2(350, 100)), " Count tiles by type = C");
 
             GUI.Label(new Rect(new Vector2(Screen.width - 165, 120), new Vector2(250, 100)), "unassigned : " + _unassigned.ToString());
 

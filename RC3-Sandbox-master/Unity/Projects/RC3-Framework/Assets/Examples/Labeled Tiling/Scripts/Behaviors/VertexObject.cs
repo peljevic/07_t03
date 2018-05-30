@@ -68,6 +68,7 @@ namespace RC3.Unity.Examples.LabeledTiling
             _scale = transform.localScale;
 
             _rigidbody = GetComponent<Rigidbody>();
+            
             _position = GetComponent<Transform>().position;
 
             OnSetTile();
@@ -93,7 +94,7 @@ namespace RC3.Unity.Examples.LabeledTiling
             _filter.sharedMesh = _tile.Mesh;
             _renderer.sharedMaterial = _tile.Material;
 
-            _rigidbody.drag = _tile.Mass;
+            _rigidbody.drag = _tile.Drag;
 
             _child.SetActive(false);
 
