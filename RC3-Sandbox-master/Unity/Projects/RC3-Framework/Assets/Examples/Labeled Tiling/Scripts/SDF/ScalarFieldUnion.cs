@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 using UnityEngine;
 
-namespace RC3.Unity.SDFDemo
-{
+namespace RC3.Unity.Examples.LabeledTiling
+{ 
     /// <summary>
     /// 
     /// </summary>
-    public class ScalarFieldInt : ScalarField
+    public class ScalarFieldUnion : ScalarField
     {
         [SerializeField] private ScalarField _sourceA;
         [SerializeField] private ScalarField _sourceB;
@@ -37,7 +37,7 @@ namespace RC3.Unity.SDFDemo
             // impl ref
             // http://iquilezles.org/www/articles/distfunctions/distfunctions.htm
 
-            return Mathf.Max(_sourceA.Evaluate(point), _sourceB.Evaluate(point));
+            return Mathf.Min(_sourceA.Evaluate(point), _sourceB.Evaluate(point));
         }
     }
 }

@@ -11,23 +11,19 @@ namespace RC3.Unity.Examples.LabeledTiling
     /// <summary>
     /// 
     /// </summary>
-    public class TileField : ScalarField
-    { 
-        [SerializeField] private VertexObject _tile;
-        [SerializeField] private Vector3 _size;
-        private Matrix4x4 _toLocal;
+    public class ScalarFieldRepeat : ScalarField
+    {
+        [SerializeField] private ScalarField _sourceA;
+        [SerializeField] private ScalarField _sourceB;
 
-        private void Awake()
-        {
-            _size = _tile.Pos;
-        }
 
         /// <summary>
         /// 
         /// </summary>
         public override void BeforeEvaluate()
         {
-            _toLocal = transform.worldToLocalMatrix;
+            _sourceA.BeforeEvaluate();
+            _sourceB.BeforeEvaluate();
         }
 
 
@@ -41,9 +37,7 @@ namespace RC3.Unity.Examples.LabeledTiling
             // impl ref
             // http://iquilezles.org/www/articles/distfunctions/distfunctions.htm
 
-            point = _toLocal.MultiplyPoint3x4(point);
-            var d = Util.Abs(point) - _size;
-            return Mathf.Min(Mathf.Max(d.x, Mathf.Max(d.y, d.z)), 0.0f) + Util.Max(d, 0.0f).magnitude;
+            return Mathf.Min(_sourceA.Evaluate(point), _sourceB.Evaluate(point));
         }
     }
 }
