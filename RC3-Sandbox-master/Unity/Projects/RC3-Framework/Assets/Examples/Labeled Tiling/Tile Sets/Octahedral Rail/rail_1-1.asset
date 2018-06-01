@@ -29,4 +29,4 @@ MonoBehaviour:
   - 1
   - 1
   _mass: 0
-  _drag: 0
+  _drag: 1

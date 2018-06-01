@@ -13,6 +13,7 @@ namespace RC3.Unity.Examples.LabeledTiling
         [SerializeField] private SharedDigraph _grid;
         [SerializeField] private TileSet _tileSet;
         [SerializeField] private float _speed;
+        [SerializeField] private float _maxSpeed;
         List<VertexObject> _vertices;
         private Digraph _graph;
         private bool _rotate = false;
@@ -73,7 +74,7 @@ namespace RC3.Unity.Examples.LabeledTiling
                 var v = _vertices[i];
                 _speed = v.Velocity;
 
-                if (_speed > 1 && v.Tile != _tileSet[0])
+                if (_speed > _maxSpeed && v.Tile != _tileSet[0])
                 {
                     Debug.Log("the speed is " + _speed);
 

@@ -13,7 +13,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mesh: {fileID: 4300000, guid: 90bd8edf975aef14893d89b27abb0689, type: 3}
   _material: {fileID: 2100000, guid: d549c402b02faf34988a940860785b57, type: 2}
-  _materialChanged: {fileID: 0}
   _labels:
   - 1
   - 0
@@ -30,3 +29,4 @@ MonoBehaviour:
   - 0
   - 0
   _mass: 1
+  _drag: 1
