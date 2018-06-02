@@ -476,8 +476,8 @@ MonoBehaviour:
   _tileGraph: {fileID: 11400000, guid: 0365da7037b3ab5479c126d42c55795a, type: 2}
   _vertexPrefab: {fileID: 114922904220032880, guid: 2d3bfc3d1154a114a9d47325987aee28,
     type: 2}
-  _countX: 5
-  _countY: 5
+  _countX: 8
+  _countY: 7
   _countZ: 5
 --- !u!114 &1467768201
 MonoBehaviour:
