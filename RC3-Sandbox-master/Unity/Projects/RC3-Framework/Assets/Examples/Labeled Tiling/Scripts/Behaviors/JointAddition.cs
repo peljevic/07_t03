@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using RC3.Graphs;
 using System;
+
+using SpatialSlur.Core;
 
 namespace RC3.Unity.Examples.LabeledTiling
 {
@@ -101,6 +104,7 @@ namespace RC3.Unity.Examples.LabeledTiling
 
         private float SmallestDistance()
         {
+            /*
             float dist0 = 100;
 
             foreach (var v in _meshedTiles)
@@ -112,14 +116,22 @@ namespace RC3.Unity.Examples.LabeledTiling
                     dist0 = dist1;
                 }
             }
+            */
+
+            var dist0 = _meshedTiles.Min(v => v.transform.position.y);
+
+    
 
             Debug.Log("Smallest distance is" + dist0);
             return dist0;
         }
 
+      
+
         private void AddKinematicToLowest()
         {
             var lowest = SmallestDistance();
+            var tolerance = 1.0f;
 
             foreach (var v in _meshedTiles)
             {
@@ -127,6 +139,15 @@ namespace RC3.Unity.Examples.LabeledTiling
                 {
                     v.Body.isKinematic = true;
                 }
+            }
+
+
+            var meanKinematicPosition = _meshedTiles.Where(v => v.Body.isKinematic).Mean(v => v.transform.position);
+
+
+            foreach(var v in _meshedTiles.Where(v => SlurMath.ApproxEquals(v.transform.position.y, lowest, tolerance)))
+            {
+               
             }
         }
 
