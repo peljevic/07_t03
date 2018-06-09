@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a1a5c79eefc2404fa21f402c390395c, type: 3}
+  m_Name: New Octahedral Tile Set
+  m_EditorClassIdentifier: 
+  _tiles:
+  - {fileID: 11400000, guid: af53eef6e6ef02f439310218e1ba6c3f, type: 2}
+  - {fileID: 11400000, guid: e20d02c3d6666034ba8c5e84c636b305, type: 2}
+  - {fileID: 11400000, guid: e2ab76c81c3f27e438ff367c3b529ae3, type: 2}
